@@ -82,6 +82,16 @@
   globalTimeoutInterval = timeout;
 }
 
+- (void)setMaxConcurrentOperationCount:(NSInteger)maxConcurrentOperationCount
+{
+    [HTTPClient setMaxConcurrentOperationCount:maxConcurrentOperationCount];
+}
+
+- (NSInteger)maxConcurrentOperationCount
+{
+    return [HTTPClient maxConcurrentOperationCount];
+}
+
 #pragma mark -
 #pragma mark LRRestyHTTPClientDelegate methods
 

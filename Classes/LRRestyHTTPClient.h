@@ -15,6 +15,7 @@
 
 @protocol LRRestyHTTPClient <NSObject>
 @property (nonatomic, assign) id<LRRestyHTTPClientDelegate> delegate;
+@property (nonatomic, assign) NSInteger maxConcurrentOperationCount;
 - (LRRestyRequest *)GET:(NSURL *)url parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers delegate:(id<LRRestyRequestDelegate>)requestDelegate;
 - (LRRestyRequest *)POST:(NSURL *)url payload:(id)payload headers:(NSDictionary *)headers delegate:(id<LRRestyRequestDelegate>)requestDelegate;
 - (LRRestyRequest *)PUT:(NSURL *)url payload:(id)payload headers:(NSDictionary *)headers delegate:(id<LRRestyRequestDelegate>)requestDelegate;

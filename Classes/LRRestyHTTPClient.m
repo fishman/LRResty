@@ -40,6 +40,16 @@
   [super dealloc];
 }
 
+- (void)setMaxConcurrentOperationCount:(NSInteger)maxConcurrentOperationCount
+{
+    operationQueue.maxConcurrentOperationCount = maxConcurrentOperationCount;
+}
+
+- (NSInteger)maxConcurrentOperationCount
+{
+    return operationQueue.maxConcurrentOperationCount;
+}
+
 - (void)cancelAllRequests
 {
   [operationQueue cancelAllOperations];

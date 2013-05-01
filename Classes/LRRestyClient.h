@@ -162,6 +162,16 @@ typedef void (^LRRestyRequestTimeoutBlock)(LRRestyRequest *);
 - (void)cancelAllRequests;
 
 /// ---------------------------------
+/// @name Concurrency
+/// ---------------------------------
+
+/**
+ * Access to the maxConcurrentOperationCount property on the client's NSOperationQueue.
+ */
+
+@property (nonatomic, assign) NSInteger maxConcurrentOperationCount;
+
+/// ---------------------------------
 /// @name Handling Timeouts
 /// ---------------------------------
 

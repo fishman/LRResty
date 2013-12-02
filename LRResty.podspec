@@ -1,3 +1,6 @@
+require 'rake'
+FileList = Rake::FileList
+
 Pod::Spec.new do |s|
   s.name         = 'LRResty'
   s.version      = '0.11.0'
